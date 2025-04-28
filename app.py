@@ -6,7 +6,7 @@ import folium
 from streamlit_folium import folium_static  # Import folium_static for map display
 
 # Load your pre-trained model (saved as 'model.pkl' previously)
-with open('model.pkl', 'rb') as f:
+with open(r'D:/NoBackup/svn/Tasks_Code/ML_House-Price-Predection/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Function to display the location on the map within Streamlit
