@@ -22,7 +22,7 @@ def show_location_on_map(latitude, longitude):
 
 # Create the Streamlit app interface
 def app():
-    st.title('California House Price Prediction  Mo.Abdo-GPT 🐥🐤🐣')
+    st.title('California House Price Prediction  Mo.Abdo-GPT ✨')
 
     # Input fields for house features
     MedInc = st.number_input('Median Income (Ex: 8.0)', value=8.0)
