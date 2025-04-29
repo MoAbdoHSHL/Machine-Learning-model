@@ -46,3 +46,5 @@ The following example shows how MSE and R² affect the model's performance:
 - If the dots are close to the line, the MSE is low, and the R² is high.
 - If the dots are far from the line, the MSE is high, and the R² is low.
 - Visualize the relationship between actual and predicted prices
+
+#streamlit run app.py
