@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from sklearn.linear_model import LinearRegression
 import folium
 from streamlit_folium import folium_static  # Import folium_static for map display
 
