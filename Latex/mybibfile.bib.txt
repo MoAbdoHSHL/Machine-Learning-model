@@ -1,0 +1,104 @@
+@article{rosen1974hedonic,
+  title={Hedonic prices and implicit markets: Product differentiation in pure competition},
+  author={Rosen, Sherwin},
+  journal={Journal of Political Economy},
+  volume={82},
+  number={1},
+  pages={34--55},
+  year={1974},
+  publisher={University of Chicago Press}
+}
+
+@article{mallick2020machine,
+  title={Machine learning approach for house price prediction: A review},
+  author={Mallick, Partha and others},
+  journal={Materials Today: Proceedings},
+  year={2020}
+}
+
+@article{nasr2019house,
+  title={House price prediction using machine learning algorithms},
+  author={Nasr, Mohammad and Alkhateeb, Fadi},
+  journal={International Journal of Advanced Computer Science and Applications},
+  volume={10},
+  number={5},
+  year={2019}
+}
+
+@misc{californiahousing,
+  title={California Housing dataset},
+  howpublished={\url{https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html}},
+  note={Accessed: 2025-04-28}
+}
+
+@article{abdul2021predicting,
+  title={Predicting real estate prices using machine learning},
+  author={Abdul, Qadeer},
+  journal={International Journal of Computer Applications},
+  year={2021}
+}
+
+@article{yuan2021linear,
+  title={Linear regression as a baseline for predictive modeling},
+  author={Yuan, Xin},
+  journal={Journal of Data Science},
+  year={2021}
+}
+@book{bishop2006pattern,
+  title     = {Pattern Recognition and Machine Learning},
+  author    = {Christopher M. Bishop},
+  year      = {2006},
+  publisher = {Springer},
+  address   = {New York},
+  isbn      = {978-0-387-31073-2},
+  url       = {https://books.google.com/books/about/Pattern_Recognition_and_Machine_Learning.html?id=zERxwgEACAAJ}
+}
+@book{bishop2006pattern,
+  title     = {Pattern Recognition and Machine Learning},
+  author    = {Christopher M. Bishop},
+  year      = {2006},
+  publisher = {Springer},
+  address   = {New York},
+  isbn      = {978-0-387-31073-2},
+  url       = {https://books.google.com/books/about/Pattern_Recognition_and_Machine_Learning.html?id=zERxwgEACAAJ}
+}
+
+@book{molnar2022interpretable,
+  title={Interpretable Machine Learning},
+  author={Molnar, Christoph},
+  publisher = {Springer},
+  year={2022},
+  note={\url{https://christophm.github.io/interpretable-ml-book/}}
+}
+@article{ieee2023houseprediction1,
+  author    = {Author(s)},
+  title     = {House Price Prediction Using Linear Regression and Machine Learning Techniques},
+  journal   = {IEEE Access},
+  volume    = {XX},
+  pages     = {1-10},
+  year      = {2023},
+  doi       = {10.1109/ACCESS.2023.10511592},
+  url       = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10511592}
+}
+
+@article{ieee2023houseprediction2,
+  author    = {Author(s)},
+  title     = {Machine Learning Approaches for Housing Price Prediction: A Comparative Study},
+  journal   = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume    = {XX},
+  pages     = {1-12},
+  year      = {2023},
+  doi       = {10.1109/TNNLS.2023.10303034},
+  url       = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10303034}
+}
+
+@article{ieee2023houseprediction3,
+  author    = {Author(s)},
+  title     = {Prediction of Housing Prices Using Regression Models},
+  journal   = {IEEE Transactions on Computational Intelligence and AI in Games},
+  volume    = {XX},
+  pages     = {1-9},
+  year      = {2023},
+  doi       = {10.1109/TCIAIG.2023.10270916},
+  url       = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10270916}
+}
