@@ -48,3 +48,4 @@ The following example shows how MSE and R² affect the model's performance:
 - Visualize the relationship between actual and predicted prices
 
 #streamlit run app.py
+https://machine-learning-model-exfaumy3w5vyei7htlpfxa.streamlit.app/
