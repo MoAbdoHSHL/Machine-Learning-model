@@ -10,7 +10,9 @@ import io
 # Load the trained model
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
-
+# Load the scaler used during training
+with open('scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
 # App public link
 APP_URL = "https://machine-learning-model-exfaumy3w5vyei7htlpfxa.streamlit.app/"
 
@@ -69,10 +71,12 @@ def app():
             'Latitude': Latitude,
             'Longitude': Longitude
         }])
-
-        predicted_price = model.predict(input_data)[0]
+        # Scale the input data using the same scaler used in training
+        scaled_input = scaler.transform(input_data)
+         # Predict with the scaled input
+        predicted_price = model.predict(scaled_input)[0]
         predicted_price = max(predicted_price, 0)
-    
+        
         st.markdown(f"💰 Predicted House Price: <h3 style='color: green;'> ${predicted_price * 100000:.2f}</h3>", unsafe_allow_html=True)
         st.write("📍**Location on Map:** ")
         show_location_on_map(Latitude, Longitude)
