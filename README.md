@@ -1,5 +1,6 @@
 # Machine-Learning-model
 # 🏡 California House Price Prediction using Linear Regression
+![image](https://github.com/user-attachments/assets/7ca72a5a-5d99-4fca-b4d7-2260827169d0)
 
 This project demonstrates how to build a simple **machine learning model** to predict house prices using the **California Housing Dataset** provided by `scikit-learn`.
 
