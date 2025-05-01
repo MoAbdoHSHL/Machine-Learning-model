@@ -2,32 +2,53 @@ import streamlit as st
 import pickle
 import pandas as pd
 import folium
-from streamlit_folium import folium_static  
+from streamlit_folium import folium_static
+import qrcode
+from PIL import Image
+import io
 
-
+# Load the trained model
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
+# App public link
+APP_URL = "https://machine-learning-model-exfaumy3w5vyei7htlpfxa.streamlit.app/"
 
+# Function to show location on the map
 def show_location_on_map(latitude, longitude):
-    # Create a map centered around the provided latitude and longitude
     map = folium.Map(location=[latitude, longitude], zoom_start=14)
-
-    # Add a marker to the map
     folium.Marker([latitude, longitude], popup=f"Location: {latitude}, {longitude}").add_to(map)
-
-    # Display the map using folium_static
     folium_static(map)
+
+
+def show_qr_code(link):
+    qr = qrcode.make(link)
+    buf = io.BytesIO()
+    qr.save(buf, format="PNG")
+    buf.seek(0)
+    image = Image.open(buf)
+    st.image(image, caption="📲 Scan to Access the App", width=200)
+
+
+def get_real_estate_links(latitude, longitude):
+    # For simplicity, these are just static links to popular websites selling homes in California
+    st.markdown("### 🏡 Real Estate Listings in Your Area (within 50km):")
+    st.write("1. [Realtor.com - Homes for Sale in California](https://www.realtor.com/realestateandhomes-search/California)")
+    st.write("2. [Zillow - Homes for Sale in California](https://www.zillow.com/ca/homes/)")
+    st.write("3. [Redfin - Homes for Sale in California](https://www.redfin.com/CA/homes-for-sale)")
+    st.write("4. [Trulia - Homes for Sale in California](https://www.trulia.com/for_sale/California/)")
 
 def app():
     st.title('House Price Prediction-GPT ✨')
-    st.markdown("""
-    ###  Do you plan to buy a house in California? 🏠
-    This AI model predicts **California house prices** using machine learning.  
-    Just choose your inputs like like **location**, **house size**, **rooms**, **Income** and get an instant price estimate!
-    Developed by **Mo. Abdo** ©
-                """)
     
+    st.markdown("""
+    ###  Do you plan to buy a house in California? 🏠  
+    This AI model predicts **California house prices** using machine learning.  
+    Just choose your inputs like **location**, **house size**, **rooms**, **Income** and get an instant price estimate!  
+    Developed by **Mo. Abdo** ©  
+    """)
+
+    # Input features
     MedInc = st.number_input('Median Income (Ex: 8.0 represents $80,000 per year))', value=8.0)
     HouseAge = st.number_input('House Age in years (Ex: 30)', value=30)
     AveRooms = st.number_input('Average number of rooms (Ex: 6)', value=6)
@@ -49,12 +70,17 @@ def app():
             'Longitude': Longitude
         }])
 
-        # Predict the price using the loaded model
         predicted_price = model.predict(input_data)[0]
         predicted_price = max(predicted_price, 0)
-        st.write(f"💰 Predicted House Price: **${predicted_price * 100000:.2f}** ")
+    
+        st.markdown(f"💰 Predicted House Price: <h3 style='color: green;'> ${predicted_price * 100000:.2f}</h3>", unsafe_allow_html=True)
         st.write("📍**Location on Map:** ")
         show_location_on_map(Latitude, Longitude)
+        get_real_estate_links(Latitude, Longitude)
+
+    st.markdown("---")
+    st.markdown("### Scan Me! 📲")
+    show_qr_code(APP_URL)
 
 if __name__ == '__main__':
     app()
