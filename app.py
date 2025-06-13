@@ -8,10 +8,10 @@ from PIL import Image
 import io
 
 # Load the trained model
-with open('model.pkl', 'rb') as f:
+with open('linear_regression_model.pkl', 'rb') as f:
     model = pickle.load(f)
 # Load the scaler used during training
-with open('scaler.pkl', 'rb') as f:
+with open('linear_regression_scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 # App public link
 APP_URL = "https://machine-learning-model-exfaumy3w5vyei7htlpfxa.streamlit.app/"
@@ -41,7 +41,7 @@ def get_real_estate_links(latitude, longitude):
     st.write("4. [Trulia - Homes for Sale in California](https://www.trulia.com/for_sale/California/)")
 
 def app():
-    st.title('House Price Prediction-GPT ✨')
+    st.title('House Price Prediction ✨')
     
     st.markdown("""
     ###  Do you plan to buy a house in California? 🏠  
