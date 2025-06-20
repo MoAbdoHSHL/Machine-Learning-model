@@ -8,10 +8,10 @@ from PIL import Image
 import io
 
 # Load the trained model
-with open('linear_regression_model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 # Load the scaler used during training
-with open('linear_regression_scaler.pkl', 'rb') as f:
+with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 # App public link
 APP_URL = "https://machine-learning-model-exfaumy3w5vyei7htlpfxa.streamlit.app/"
